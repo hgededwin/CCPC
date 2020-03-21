@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/cv_tarjeta_consultas"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center_horizontal"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="0dp"
+    >
+
+    <RelativeLayout
+        android:id="@+id/relative_consultas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBluePrimary"
+        android:orientation="vertical"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        >
+
+        <ImageView
+            android:id="@+id/img_mastercard_cv"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/ic_mastercard"
+
+            />
+
+        <TextView
+            android:id="@+id/txt_saldo_texto_cv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_mastercard_cv"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/helveticaneue"
+            android:text="Saldo"
+            android:textColor="@color/whitePrimary"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_number_cuenta_consulta_cv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="3dp"
+            android:fontFamily="@font/helveticaneuelight"
+            android:text="**** 0000"
+            android:textColor="@color/whitePrimary"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_saldo_consulta_cv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_saldo_texto_cv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/helveticaneue"
+            android:text="$0.00"
+            android:textColor="@color/whitePrimary"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/txt_bloquear_tarjeta_cv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_saldo_consulta_cv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/helveticaneue"
+            android:text="Bloquear tarjeta"
+            android:textColor="@color/whitePrimary"
+            android:textSize="12sp" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_consulta_cv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_bloquear_tarjeta_cv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            style="@style/SwitchCompat"
+            />
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

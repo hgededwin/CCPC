@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitePrimary"
+    tools:context=".Transferencias.TransferenciaFallidaActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/btn_aceptar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_registro_exitoso"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:src="@drawable/sin_exito"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_registro_exitoso"
+            style="@style/Titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/str_transfer_fallida"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@+id/img_registro_exitoso" />
+
+        <TextView
+            android:id="@+id/txt_leyenda_transferencia_fallida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:maxWidth="245dp"
+            android:text="@string/str_leyenda_transfer_fallida"
+            android:textAlignment="center"
+            android:textColor="@color/colorBluePrimary"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_registro_exitoso" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_aceptar"
+        style="@style/PrimaryAcionButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:onClick="onClickReintentarTransfer"
+        android:text="@string/str_reintentar_transfer"
+        android:layout_marginLeft="@dimen/margin_side"
+        android:layout_marginRight="@dimen/margin_side"
+
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_cancelar"
+        android:layout_marginBottom="@dimen/margin_bottom"
+        android:fontFamily="@font/helveticaneuemedium"
+        android:onClick="onClickIntentarTarde"
+        android:text="@string/str_intentar_transfer_mas_tarde"
+        android:textColor="@color/colorBluePrimary"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_aceptar" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

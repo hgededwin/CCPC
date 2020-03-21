@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cacaopaycard.cacaopay">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/AppThemeCacaoLight">
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+        <activity android:name=".Transferencias.TransferenciaExitosaActivity"></activity>
+        <activity
+            android:name=".MainContainer"
+            android:label="@string/title_activity_main_container"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCacaoDark"
+            />
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCacaoDark">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AdminCuenta.Tarjetas.EditarTarjetaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCacaoDark" />
+        <activity
+            android:name=".Registro.RecuperacionPassword.RecuperacionPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCacaoLight" />
+        <activity
+            android:name=".Transferencias.RecibirDineroActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCacaoDark" />
+        <activity
+            android:name=".AdminCuenta.Tarjetas.AgregarTarjetaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCacaoDark" />
+        <activity
+            android:name=".Transferencias.TransferenciaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCacaoDark"
+            android:windowSoftInputMode="stateHidden"
+            />
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCacaoLight"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            />
+        <activity
+            android:name=".Registro.RegistroExitosoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCacaoLight" />
+        <activity
+            android:name=".Registro.SetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCacaoLight" />
+        <activity
+            android:name=".Registro.VerificacionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCacaoLight" />
+        <activity
+            android:name=".Registro.RegistroActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCacaoLight" />
+        <activity
+            android:name=".onBoarding.OnboardingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCacaoLight" />
+        <activity
+            android:name=".Registro.RecuperacionPassword.RecuperacionPassInPhoneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCacaoLight" />
+        <activity
+            android:name=".Transferencias.TransferenciaFallidaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCacaoDark" />
+    </application>
+
+</manifest>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/whitePrimary"
+    tools:context=".AdminCuenta.PerfilFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_perfil"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/usuario_perfil"
+            />
+        <TextView
+            android:id="@+id/txt_nombre_titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_perfil"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:text="Juan Perez"/>
+
+        <TextView
+            android:id="@+id/txt_cambiar_foto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_nombre_titulo"
+            android:onClick="onClickCambiarFoto"
+            android:text="@string/str_cambiar_foto"
+            />
+
+        <ImageView
+            android:id="@+id/img_alert_info_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@+id/txt_nombre_titulo"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_nombre_titulo"
+            android:layout_marginLeft="20dp"
+            app:srcCompat="@drawable/ic_alert_perfil"
+
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_nombre_perfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_cambiar_foto"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtxt_titular_perfil"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/str_nombre"
+                android:text="Jose Perez"
+                android:enabled="false"
+                android:inputType="textPersonName"
+                android:focusableInTouchMode="false"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_fecha_nac_perfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_nombre_perfil"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:visibility="gone"
+
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtxt_fecha_perfil"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/str_fecha_nacimiento"
+                android:enabled="false"
+                android:textColor="@color/colorBluePrimary"
+                android:inputType="none"
+                android:clickable="true"
+                android:onClick="onClickSetDate"
+                android:focusableInTouchMode="false"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_telefono_perfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_fecha_nac_perfil"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edxt_telefono_perfil"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/str_telefono"
+                android:text="5555555555"
+                android:enabled="false"
+                android:inputType="phone"
+                android:focusableInTouchMode="false"
+                android:maxLength="10"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_correo_perfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_telefono_perfil"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtxt_correo_perfil"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/str_correo_electronico"
+                android:text="mail@domain.com"
+                android:enabled="false"
+                android:inputType="textEmailAddress"
+                android:focusableInTouchMode="false"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/btn_guardar_perfil"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_correo_perfil"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="40dp"
+            android:text="@string/str_editar_informacion"
+            android:visibility="gone"
+            android:onClick="onClickGuardarCambiosPerfil"
+            style="@style/PrimaryAcionButton"
+
+            />
+
+        <TextView
+            android:id="@+id/btn_cancelar_perfil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_guardar_perfil"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="40dp"
+            android:background="@android:color/transparent"
+            android:textColor="@color/colorBluePrimary"
+            android:text="@string/str_cancelar"
+            android:onClick="onClickCancelarEditarPerfil"
+            android:visibility="gone"
+            android:textAllCaps="false"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

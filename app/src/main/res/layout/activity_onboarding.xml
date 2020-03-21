@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".onBoarding.OnboardingActivity"
+    android:background="@color/whitePrimary"
+    >
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_alignParentTop="true"
+        android:id="@+id/pager_onboarding"
+        android:layout_width="match_parent"
+        android:layout_height="400dp" />
+
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/indicator_onboarding"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:ci_drawable="@drawable/indicator_circle"
+        android:layout_below="@+id/pager_onboarding"
+        />
+    <Button
+        android:id="@+id/btn_registro"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_below="@+id/indicator_onboarding"
+        android:layout_centerHorizontal="true"
+        android:text="@string/str_siguiente"
+        android:textColor="@color/whitePrimary"
+        android:layout_marginLeft="@dimen/margin_side"
+        android:layout_marginRight="@dimen/margin_side"
+        style="@style/PrimaryAcionButton"
+        />
+
+
+
+</RelativeLayout>

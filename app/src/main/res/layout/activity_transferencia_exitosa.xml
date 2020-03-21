@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".Transferencias.TransferenciaExitosaActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout9"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout8"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="65dp">
+
+        <ImageView
+            android:id="@+id/img_succes_trf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="-25dp"
+            android:elevation="10dp"
+            android:src="@drawable/bien_corner_white" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_comprobante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_side"
+            android:layout_marginLeft="@dimen/margin_side"
+            app:cardCornerRadius="15dp"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorBluePrimary"
+                android:orientation="vertical"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:id="@+id/txt_titulo_transaccion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/helveticabold"
+                    android:text="Transacción exitosa"
+                    android:textColor="@color/colorGreenPrimary"
+                    android:textSize="16sp"
+                    android:layout_marginTop="30dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/helveticaneue"
+                    android:text="COMPROBANTE"
+                    android:textColor="@color/whitePrimary"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/whitePrimary" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="30dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="30dp"
+                    android:paddingBottom="20dp">
+
+                    <TextView
+                        android:id="@+id/txt_fecha_titulo"
+                        style="@style/TextComprobante"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="FECHA"
+                        android:textColor="@color/item_color_blue_gray"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/txt_fecha_trf"
+                        style="@style/TextComprobante"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_fecha_titulo"
+                        android:textColor="@color/whitePrimary"
+                        tools:text="25-05-2019" />
+
+                    <TextView
+                        android:id="@+id/txt_destino_titulo"
+                        style="@style/TextComprobante"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_fecha_trf"
+                        android:layout_marginTop="15dp"
+                        android:text="DESTINO"
+                        android:textColor="@color/item_color_blue_gray" />
+
+                    <TextView
+                        android:id="@+id/txt_destino_trf"
+                        style="@style/TextComprobante"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_destino_titulo"
+                        android:textColor="@color/whitePrimary"
+                        tools:text="Juan Villoro" />
+
+                    <TextView
+                        android:id="@+id/txt_cantidad_titulo"
+                        style="@style/TextComprobante"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_destino_trf"
+                        android:layout_marginTop="15dp"
+                        android:text="CANTIDAD"
+                        android:textColor="@color/item_color_blue_gray"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/txt_cantidad_trf"
+                        style="@style/TextComprobante"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_cantidad_titulo"
+                        android:textColor="@color/whitePrimary"
+                        tools:text="$0.00" />
+
+
+                    <TextView
+                        android:id="@+id/txt_hora_titulo"
+                        style="@style/TextComprobante"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/txt_fecha_titulo"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="30dp"
+                        android:text="HORA"
+                        android:textColor="@color/item_color_blue_gray"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/txt_hora_trf"
+                        style="@style/TextComprobante"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_hora_titulo"
+                        android:layout_alignLeft="@+id/txt_hora_titulo"
+                        android:textColor="@color/whitePrimary"
+                        tools:text="00:00" />
+
+
+                    <TextView
+                        android:id="@+id/txt_cuenta_titulo"
+                        style="@style/TextComprobante"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/txt_hora_trf"
+                        android:layout_alignTop="@+id/txt_destino_titulo"
+                        android:text="CUENTA"
+                        android:textColor="@color/item_color_blue_gray" />
+
+                    <TextView
+                        android:id="@+id/txt_cuenta"
+                        style="@style/TextComprobante"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_cuenta_titulo"
+                        android:layout_alignLeft="@+id/txt_cuenta_titulo"
+                        android:text="**** 0000"
+                        android:textColor="@color/whitePrimary" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/whitePrimary" />
+
+                <TextView
+                    style="@style/TextComprobante"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:paddingLeft="30dp"
+                    android:text="TARJETA DE ORIGEN"
+                    android:textColor="@color/item_color_blue_gray" />
+
+                <TextView
+                    android:id="@+id/txt_card_origin_trf"
+                    style="@style/TextComprobante"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:paddingLeft="30dp"
+                    android:textColor="@color/whitePrimary"
+                    tools:text="**** 3211" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/whitePrimary" />
+
+                <TextView
+                    style="@style/TextComprobante"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:paddingLeft="30dp"
+                    android:text="NÚMERO DE RASTREO"
+                    android:textColor="@color/item_color_blue_gray" />
+
+                <TextView
+                    android:id="@+id/txt_num_rastreo_trf"
+                    style="@style/TextComprobante"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="30dp"
+                    android:text="000000"
+                    android:textColor="@color/whitePrimary" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout9"
+        tools:layout_editor_absoluteX="0dp">
+
+        <Button
+            android:id="@+id/btn_finish_successful_trf"
+            style="@style/PrimaryAcionButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginLeft="@dimen/margin_side"
+            android:layout_marginRight="@dimen/margin_side"
+            android:layout_marginBottom="@dimen/margin_top_cancelar"
+            android:onClick="onClickTerminarTransaccionExitosa"
+            android:text="@string/str_terminar" />
+
+        <TextView
+            android:id="@+id/txt_compartir_datos_transfer"
+            style="@style/TextCancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_bottom"
+            android:onClick="onClickCompartirTransfer"
+            android:text="Compartir"
+
+            />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

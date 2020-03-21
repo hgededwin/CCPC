@@ -1,0 +1,258 @@
+<resources>
+
+    <!-- Customize here -->
+
+    <string name="app_name">CacaoPay</string>
+
+    <!-- Mensajes onBoarding -->
+    <string name="str_intro_uno">Cacao te permite transferir entre cuentas del mismo banco, asi como a bancos de terceros.</string>
+    <string name="str_intro_dos">Recibe pagos de tus contactos y usa tus tarjetas en cualquier establecimiento.</string>
+    <string name="str_intro_tres">Ten siempre a la mano tus estados de cuenta y los movimientos de cada tarjeta.</string>
+
+
+    <string name="str_mensaje_ayuda">Contáctanos a traves de la cuenta de correo <font color="#5BA0A6"><b>cacaohelp@cacaopaycard.com</b></font> para cualquier duda o aclaración sobre tus cuentas o cualquier otro aspecto relacionado con la aplicación.</string>
+    <string name="str_mensaje_para_compartir">¡Hola! Te comparto mis datos bancarios para transferir dinero a mi cuenta. \nMi número de tarjeta para enviarme dinero solo desde otra cuenta Cacao es: \n%1$s\n\nMi número de cuenta CLABE para enviarme dinero desde cualquier otro banco (SPEI) es: \n%2$s\n\nBanco STP.</string>
+    <string name="str_tarjeta_cuenta_cacao">Ingresa cuenta cacao</string>
+    <string name="support_email">cacaohelp@cacao.com</string>
+
+    <!-- End customize -->
+
+
+
+    <!-- Registro -->
+    <string name="str_nombre">Nombre</string>
+    <string name="str_telefono">Teléfono</string>
+    <string name="str_email">Email</string>
+    <string name="str_hay_cuenta">¿Ya tienes cuenta?</string>
+    <string name="str_numero_de_tarjeta">Número de tarjeta</string>
+    <string name="str_ingresa_aqui">Ingresa aquí</string>
+
+
+    <!-- Verififcaion de código -->
+    <string name="str_verif_2_pasos">Verificación de número</string>
+    <string name="str_ingresar_codigo">Introduce el código de activación que te hemos enviado</string>
+    <string name="str_reenviar_codigo">Reenviar código por</string>
+    <string name="str_sms">SMS</string>
+    <string name="str_email_SMS">Email y SMS</string>
+    <string name="str_algun_problema">¿Tienes algún problema?</string>
+    <string name="str_obten_ayuda">Obten ayuda</string>
+
+
+    <!-- Establecer contraseña -->
+    <string name="str_establecer_pass">Crea un PIN de acceso de 6 dígitos</string>
+    <string name="str_password">PIN</string>
+    <string name="str_contrasenia">PIN</string>
+    <string name="str_crea_password">Crea un PIN</string>
+
+
+    <!-- Éxito -->
+    <string name="str_texto_registro_terminado">Comienza a utilizar la aplicación para administrar de manera eficiente tu dinero.</string>
+    <string name="str_registro_exitoso">Registro exitoso</string>
+    <string name="str_comenzar">Comenzar</string>
+    <string name="str_edicion_exitosa">Edición exitosa</string>
+    <string name="str_leyenda_edicion_exitosa">Has editado correctamente tu tarjeta</string>
+    <string name="str_adicion_tarjeta_exitosa">¡Tarjeta agregada!</string>
+    <string name="str_leyenda_tarjeta_agregada">Has añadido correctamente tu tarjeta</string>
+    <string name="str_titulo_pass_change">¡Cambio de PIN exitoso!</string>
+    <string name="str_leyenda_cambio_pass_exitoso">Has camabiado exitosamente tu PIN, ingresa nuevamente para usar la aplicación.</string>
+
+
+    <!-- Login -->
+    <string name="str_olvide_password"><u>Olvidé mi PIN</u></string>
+    <string name="str_iniciar_sesion">Iniciar sesión</string>
+    <string name="str_cambie_celular">Cambié de celular</string>
+    <string name="str_crear_cuenta">Crea una cuenta</string>
+
+
+    <!-- Menú lateral -->
+    <string name="str_mi_perfil">Mi perfil</string>
+    <string name="str_mis_tarjetas">Mis tarjetas</string>
+    <string name="str_ayuda">Ayuda</string>
+    <string name="str_cerrar_sesion">Cerrar sesión</string>
+
+    <!-- Mi perfil-->
+    <string name="str_fecha_nacimiento">Fecha de nacimiento</string>
+    <string name="str_correo_electronico">Correo electrónico</string>
+    <string name="str_cambiar_foto">Cambiar foto</string>
+    <string name="str_tomar_foto">Tomar foto</string>
+    <string name="str_elegir_galeria">Elegir en tu galería</string>
+    <string name="str_editar_informacion">Editar información</string>
+
+    <!-- Mis tarjetas-->
+    <string name="str_agregar_tarjeta">Agregar tarjeta</string>
+    <string name="str_remover_tarjeta">Remover tarjeta</string>
+
+
+    <!-- Ayuda -->
+    <string name="str_contactar">Contactar</string>
+
+
+    <!-- Transferencias -->
+    <string name="str_tarjeta_clabe_y_propios">Tarjeta, cuenta o CLABE </string>
+
+    <string name="str_ingresa_el_banco">Ingresa el banco o institución</string>
+    <string name="str_cuanto_deseas_transferir">¿Cuánto deseas transferir?</string>
+    <string name="str_numero_de_referencia">Número de referencia <i>(opcional)</i></string>
+    <string name="str_nombre_beneficiario">Nombre del beneficiario</string>
+    <string name="str_concepto">Concepto</string>
+    <string name="str_tarjeta_origen_de_transferencia">Tarjeta origen de transferencia</string>
+    <string name="str_ingrese_pin_leyenda">Se envió un PIN de confirmación a tu correo/SMS ingrésalo aquí para continuar.</string>
+    <string name="str_tipo_cuenta">Ingrese tipo de cuenta</string>
+
+    <!-- Respuesta transferencia-->
+    <string name="str_transferencia_exitosa">Transferencia exitosa</string>
+    <string name="str_leyenda_transferencia_exitosa">Se ha realizado la transferencia con éxito</string>
+    <string name="str_leyenda_transfer_fallida">No se pudo llevar a cabo la transferencia debido a un problema de conexión, conéctate a una red segura e inténtalo nuevamente</string>
+    <string name="str_reintentar_transfer">Reintentar ahora</string>
+    <string name="str_intentar_transfer_mas_tarde">Intentar más tarde</string>
+    <string name="str_transfer_fallida">Transferencia fallida</string>
+    <string name="str_tarjeta_clabe_transferir">Ingresa tarjeta o CLABE</string>
+
+
+    <!-- Recibir dinero -->
+    <string name="str_leyenda_recibir_dinero">Para recibir dinero de cualquier banco en tu tarjeta, comparte la información de la tarjeta en la que deseas recibir dinero.</string>
+    <string name="str_compartir_datos">Compartir datos</string>
+
+
+    <!-- Recuperación de contraseña -->
+    <string name="str_leyenda_verificacion">Introduce el código de activación que te hemos enviado</string>
+    <string name="str_sms_no_recibido">No lo recibí, envíamelo nuevamente</string>
+    <string name="str_verificar">Verificar</string>
+    <string name="str_leyenda_recuperacion">Crea un nuevo PIN de acceso de 6 dígitos</string>
+    <string name="str_titulo_crea_nuevo_pass">Reestablece tu PIN</string>
+    <string name="str_instruccion_pass">Debe contener 6 dígitos.</string>
+
+    <!-- Recuperación de contraseña, validación teléfono -->
+    <string name="str_leyenda_validar_cuenta_rec_pass">Te enviaremos un código para reestablecer tu PIN. Necesitamos la información asociada a tu cuenta.</string>
+
+
+    <!-- Item tarjeta -->
+    <string name="str_bloquear_tarjeta">Bloquear tarjeta</string>
+
+
+    <!-- Textos de botones -->
+    <string name="str_siguiente">Siguiente</string>
+    <string name="str_continuar">Continuar</string>
+    <string name="str_guardar">Guardar</string>
+    <string name="str_aceptar">Aceptar</string>
+    <string name="str_entrar">Entrar</string>
+    <string name="str_cancelar">Cancelar</string>
+    <string name="str_agregar">Agregar</string>
+    <string name="str_terminar">Terminar</string>
+    <string name="str_eliminar">Eliminar</string>
+    <string name="str_registrate">Regístrate</string>
+    <string name="str_registrarme">Registrarme</string>
+    <string name="str_editar">Editar</string>
+    <string name="str_guardar_salir">Guardar cambios</string>
+    <string name="str_listo">Listo</string>
+    <string name="str_entendido">Entendido</string>
+
+
+    <!-- Detalles de tarjeta -->
+    <string name="str_cvv">CVV</string>
+    <string name="str_pin">PIN</string>
+    <string name="str_stp">STP</string>
+    <string name="str_tarjeta_activa">Tarjeta activa</string>
+
+
+    <!-- Consultas -->
+    <string name="str_confirmacion_bloqueo">¿Seguro que quiere bloquear su tarjeta?</string>
+    <string name="str_confirmacion_desbloqueo">¿Seguro que quiere desbloquear su tarjeta?</string>
+    <string name="str_hacer_transferencia">Hacer transferencia</string>
+    <string name="str_mandar_dinero">Mandar dinero</string>
+    <string name="str_recibir_transferencia">Recibir transferencia</string>
+    <string name="str_sin_movimientos">No se han detectado movimientos para esta tarjeta.</string>
+    <string name="str_sin_tarjetas">No se encontraron tarjetas registradas.</string>
+
+    <!-- Navigation drawer -->
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="str_direccion">Dirección</string>
+    <string name="str_cerrar_nav">Cerrar nav</string>
+    <string name="str_abrir_nav">Abrir nav</string>
+    <string name="str_mi_tarjeta">Mi tarjeta</string>
+
+
+    <string name="str_permisos_no_otorgados">No se otorgaron todos los permisos</string>
+    <string name="str_ingresa_numero_tarjeta">Ingresa el número de la tarjeta</string>
+    <string name="str_edita_tu_tarjeta">Edita tu tarjeta</string>
+    <string name="str_recuperacion_acceso">Recuperación de acceso</string>
+    <string name="str_enviar_codigo_por">Enviar código por</string>
+    <string name="str_cantidad_a_transferir">Cantidad a transferir</string>
+    <string name="str_pedir_permisos">Debe aceptar los siguiente permisos para poder utilizar su app</string>
+    <string name="str_editar_mis_tarjetas">Edita tus tarjetas, agrega o elimina.</string>
+    <string name="str_ingresar_nombre_tarjeta">Ingresa el nombre de la tarjeta</string>
+
+    <!-- Peticiones URL -->
+    <string name="url_card_balance">https://cocoa.cacaopaycard.com/api/v1/card_balance</string>
+    <string name="url_moves">https://cocoa.cacaopaycard.com/api/v1/moves</string>
+    <string name="url_get_user_data">https://cocoa.cacaopaycard.com/api/v1/user_data</string>
+    <string name="url_login">https://cocoa.cacaopaycard.com/api/v1/login_user</string>
+    <string name="url_update_password">https://cocoa.cacaopaycard.com/api/v1/update_password</string>
+    <string name="url_reenvio_pin_registro">https://cocoa.cacaopaycard.com/api/v1/pin_forwarding</string>
+    <string name="url_forgot_pass">https://cocoa.cacaopaycard.com/api/v1/forgot_password</string>
+    <string name="url_registro">https://cocoa.cacaopaycard.com/api/v1/register_user</string>
+    <string name="url_add_card">https://cocoa.cacaopaycard.com/api/v1/add_card</string>
+    <string name="url_delete_card">https://cocoa.cacaopaycard.com/api/v1/delete_card</string>
+    <string name="url_change_nip">https://cocoa.cacaopaycard.com/api/v1/change_nip</string>
+    <string name="url_tranfer_terceros">https://cocoa.cacaopaycard.com/api/v1/transfer_terceros</string>
+    <string name="url_tranfer_send">https://cocoa.cacaopaycard.com/api/v1/transfer_send</string>
+    <string name="url_init_transfer">https://cocoa.cacaopaycard.com/api/v1/transfer</string>
+    <string name="url_lock_unlock">https://cocoa.cacaopaycard.com/api/v1/locks_blocks_cards</string>
+
+    <!-- params -->
+    <string name="app_id_params">id_app</string>
+    <string name="phone_params">phone</string>
+    <string name="email_phone_params">email_phone</string>
+    <string name="device_uuid_params">devise_uuid</string>
+    <string name="name_params">name</string>
+    <string name="email_params">email</string>
+    <string name="card_number_param">card_number</string>
+    <string name="phone_code_params">phone_code</string>
+    <string name="version_params">Version</string>
+    <string name="pass_param">password</string>
+    <string name="pass_param_confirmation">password_confirmation</string>
+    <string name="numero_tarjeta_param">numero_tarjeta</string>
+    <string name="numero_tarjeta_emisora_param">numero_tarjeta_emisora</string>
+    <string name="tarjeta_receptora_param">numero_tarjeta_receptora</string>
+    <string name="monto_param">monto</string>
+    <string name="num_refer_param">numero_referencia</string>
+    <string name="nickname_param">nickname</string>
+    <string name="nip_param">nip</string>
+    <string name="nip_confirmation_param">nip_confirmation</string>
+    <string name="concepto_param">concepto_pago</string>
+    <string name="referencia_numerica_param">referencia_numerica</string>
+    <string name="nombre_beneficiario_param">nombre_beneficiario</string>
+    <string name="tarjeta_emisora_param">numero_tarjeta_emisora</string>
+    <string name="tarjeta_emisora_2_param">tarjeta_emisora</string>
+    <string name="cuenta_beneficiario">cuenta_beneficiario</string>
+    <string name="trx_param">id_trx</string>
+    <string name="id_client_param">id_client</string>
+    <string name="pin_param">pin</string>
+    <string name="status_desired_param">status_desired</string>
+
+    <string name="title_activity_main_container">MainContainer</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <!-- Titulos Bottom View -->
+    <string name="str_nav_perfil">Perfil</string>
+    <string name="str_nav_tarjetas">Tarjetas</string>
+    <string name="str_nav_transaccion">Transacción</string>
+    <string name="str_nav_ayuda">Ayuda</string>
+    <string name="str_nav_cerrar_sesion">Salir</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="str_descripción_editar_tarjeta">Edita los datos de tu tarjeta</string>
+    <string name="str_nombre_tarjeta_edicion">Nombre de tarjeta <i>(opcional)</i></string>
+    <string name="str_cambia_nip">Cambia el nip</string>
+    <string name="str_movimientos">Movimientos</string>
+    <string name="str_tarjeta_bloqueada">Tarjeta bloqueada</string>
+
+    <string name="nip">NIP</string>
+    <string name="alias">Alias</string>
+
+
+</resources>

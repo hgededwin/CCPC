@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    app:cardBackgroundColor="@color/color_movimientos"
+    app:cardElevation="0dp"
+    app:cardCornerRadius="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="10dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/img_item_movimientos"
+            android:layout_width="28dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/ic_transferencia_recibida"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            />
+
+        <View
+            android:id="@+id/line_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/img_item_movimientos"
+            android:layout_toRightOf="@+id/img_item_movimientos"
+            android:background="@color/color_gray_detalles"
+            />
+
+        <TextView
+            android:id="@+id/txt_descripcion_movimiento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/img_item_movimientos"
+            android:layout_marginLeft="10dp"
+            android:text="Transacciones"
+            style="@style/TextMovimientos"
+            />
+
+
+        <TextView
+            android:id="@+id/txt_movimiento_monto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="+$1200"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/helveticabold"
+            android:textSize="16sp"
+
+            />
+
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>

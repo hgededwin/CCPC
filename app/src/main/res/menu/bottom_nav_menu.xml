@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_perfil_bottom"
+        android:icon="@drawable/ic_perfil_bottom"
+        android:title="@string/str_nav_perfil"
+        />
+    <item
+        android:id="@+id/nav_tarjetas_bottom"
+        android:icon="@drawable/ic_tarjetas_bottom"
+        android:title="@string/str_nav_tarjetas" />
+
+    <item
+        android:id="@+id/nav_transacciones_bottom"
+        android:icon="@drawable/ic_transacciones_bottom"
+        android:title="@string/str_nav_transaccion" />
+    <item
+        android:id="@+id/nav_ayuda_bottom"
+        android:icon="@drawable/ic_ayuda_bottom"
+        
+        android:title="@string/str_nav_ayuda" />
+
+    <item
+        android:id="@+id/nav_cerrar_bottom"
+        android:icon="@drawable/ic_salir_bottom"
+        android:title="@string/str_nav_cerrar_sesion" />
+
+</menu>

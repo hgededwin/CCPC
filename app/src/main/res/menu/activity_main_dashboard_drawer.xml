@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view"
+
+    >
+
+    <group android:checkableBehavior="single" >
+        <item
+
+            android:id="@+id/nav_mi_perfil"
+            android:icon="@drawable/ic_perfil_white"
+            android:title="@string/str_mi_perfil" />
+        <item
+            android:id="@+id/nav_mi_tarjeta"
+            android:icon="@drawable/ic_tarjeta_pago_white"
+            android:title="@string/str_mis_tarjetas" />
+        <item
+            android:id="@+id/nav_ayuda"
+            android:icon="@drawable/ic_ayuda"
+            android:title="@string/str_ayuda" />
+
+    </group>
+
+    <item android:title=" " >
+        <menu>
+
+            <item
+                android:id="@+id/nav_close"
+                android:icon="@drawable/ic_cerrar_sesion"
+                android:title="@string/str_cerrar_sesion"
+
+                />
+        </menu>
+    </item>
+
+</menu>

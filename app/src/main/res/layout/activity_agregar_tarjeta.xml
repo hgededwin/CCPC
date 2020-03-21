@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/whitePrimary"
+    tools:context=".AdminCuenta.Tarjetas.AgregarTarjetaActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_agregar_tarjeta"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="@drawable/ic_flecha_white"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:background="@color/colorBluePrimary"
+        app:title=" "
+        android:elevation="5dp"
+        android:layout_alignParentTop="true"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/whitePrimary"
+            android:text="@string/str_agregar_tarjeta"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            />
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/txt_titulo_agregar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_agregar_tarjeta"
+        android:text="ingresa los datos de la tarjeta"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="20dp"
+        style="@style/SubtitleCacao"
+        />
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_nombre_tarjeta_agregar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/txt_titulo_agregar"
+        app:errorEnabled="true"
+        >
+
+        <EditText
+            android:id="@+id/edtxt_agregar_numero_tarjeta"
+            style="@style/PrimaryInputText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/alias">
+
+        </EditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_numero_tarjeta_agregar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/til_nombre_tarjeta_agregar"
+        app:errorEnabled="true"
+        >
+        <com.cacaopaycard.cacaopay.Utils.MaskEditText
+            android:id="@+id/maskedtxt_agregar_nombre_tarjeta"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/str_numero_de_tarjeta"
+            android:maxLength="19"
+            android:inputType="phone"
+            style="@style/PrimaryInputText"
+            >
+
+        </com.cacaopaycard.cacaopay.Utils.MaskEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_set_pin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/til_numero_tarjeta_agregar"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        app:errorEnabled="true"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/colorBluePrimary">
+
+        <EditText
+            android:id="@+id/edtxt_set_pin"
+            style="@style/PrimaryInputText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/nip"
+            android:inputType="numberPassword"
+            android:maxLength="4"
+            android:textColorHint="@color/colorBluePrimary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        style="@style/PrimaryAcionButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginLeft="@dimen/margin_side"
+        android:layout_marginTop="55dp"
+        android:layout_marginRight="@dimen/margin_side"
+        android:layout_above="@+id/txt_cancelar_agregar_tarjeta"
+        android:onClick="onClickConfirmacionAgregar"
+        android:text="@string/str_agregar"
+        />
+
+    <TextView
+        android:id="@+id/txt_cancelar_agregar_tarjeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="@dimen/margin_bottom"
+        android:onClick="onClickCancelarAgregacion"
+        android:text="@string/str_cancelar"
+        style="@style/TextCancelar"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>

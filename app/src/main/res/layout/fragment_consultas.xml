@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitePrimary"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ConsultasFragment">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager_menu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+
+    <TextView
+        android:id="@+id/txt_transfer_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/helveticabold"
+        android:paddingLeft="30dp"
+        android:text="Transferencia"
+        android:textColor="@color/colorBluePrimary"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/pager_menu" />
+
+
+    <Button
+        android:id="@+id/btn_recibir_transferencias_db"
+        style="@style/ButtonDashboard"
+        android:layout_width="150dp"
+        android:layout_height="@dimen/button_consultas"
+        android:background="@drawable/button_dashboard_recibir"
+        app:drawableLeftCompat="@drawable/ic_boton_recibir_transfer"
+        android:drawablePadding="-10dp"
+        android:onClick="onClickRecibirPago"
+        android:paddingLeft="10dp"
+        android:text="Recibir"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/btn_transferencia_db"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline5" />
+
+    <Button
+        android:id="@+id/btn_transferencia_db"
+        style="@style/ButtonDashboard"
+        android:layout_width="150dp"
+        android:layout_height="@dimen/button_consultas"
+        android:background="@drawable/button_dashboard_mandar"
+        app:drawableLeftCompat="@drawable/ic_boton_mandar_transfer"
+        android:drawablePadding="-10dp"
+        android:paddingLeft="10dp"
+        android:text="Mandar"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_recibir_transferencias_db"
+        app:layout_constraintTop_toTopOf="@+id/guideline5" />
+
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:ci_drawable="@drawable/indicator_circle"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.57" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/color_movimientos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        tools:layout_editor_absoluteX="84dp">
+
+
+        <TextView
+            android:id="@+id/txt_mov_consultas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/str_movimientos"
+            android:textSize="14sp"
+            android:fontFamily="@font/helveticabold"
+            android:textColor="@color/colorBluePrimary" />
+
+        <View
+            android:id="@+id/line_divider_mov"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_gray_detalles"
+            android:layout_below="@+id/txt_mov_consultas"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/txt_sin_movimientos"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/helveticabold"
+            android:text="Hoy no has realizado movimietnos con esta tarjeta"
+            android:textAlignment="center"
+            android:textColor="@color/item_color_blue_gray"
+            android:visibility="gone" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_movimientos_consultas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line_divider_mov"
+            android:layout_alignParentBottom="true"
+            android:scrollIndicators="right"
+            android:scrollbarThumbVertical="@color/color_gray_detalles"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.37" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.51" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.43" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

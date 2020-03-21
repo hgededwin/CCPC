@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+    <!-- Customize here. -->
+    <color name="colorBluePrimary">#00263D</color> <!--Base Color -->
+    <color name="colorGreenPrimary">#6FBF4A</color> <!-- Accent Color -->
+    <!-- End customize -->
+
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="colorBlueTransparent">#33003862</color>
+    <color name="colorGrayPrimary">#D8D8D8</color>
+    <color name="white_tranparent">#33FFFFFF</color>
+    <color name="whitePrimary">#FFFFFF</color>
+    <color name="grayMessage">#747474</color>
+    <color name="color_movimientos">#EAEAEA</color>
+    <color name="color_gray_detalles">#b4b3b3</color>
+    <color name="color_bottom_sheet_mov">#EDF0FB</color>
+    <color name="color_button_recibir">#1A4C79</color>
+    <color name="blue_color_contraste">#4A989C</color> <!--74,152,156-->
+    <color name="red_color">#CC1010</color>
+    <color name="item_color_blue_gray">#77869E</color>
+    <color name="item_color_mustard">#A9A03C</color>
+    <color name="color_items_bloqueo">#65656A</color>
+    <color name="color_disable">#989CA1</color>
+</resources>
