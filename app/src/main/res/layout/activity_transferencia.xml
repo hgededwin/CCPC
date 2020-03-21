@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/whitePrimary"
+    tools:context=".Transferencias.TransferenciaActivity"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_transferencias"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_flecha"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:background="@color/whitePrimary"
+            app:title=" "
+            android:elevation="5dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/colorBluePrimary"
+                android:text="@string/str_mandar_dinero"
+                android:textSize="16sp"
+                android:layout_gravity="center_horizontal"
+                />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_tarjeta_origen_de_transferencia"
+            android:textColor="@color/colorBluePrimary"
+            android:textSize="12sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            />
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="10dp"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:background="@color/whitePrimary"
+                android:padding="15dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/txt_numero_cuenta_cv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/grayMessage"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/couriernew"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:textSize="14sp"
+                    android:layout_marginTop="-1dp"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_saldo_tarjeta_cv_transferencia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/helveticaneuemedium"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBluePrimary" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_mastercard"
+                    android:layout_alignParentRight="true"
+                    />
+
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_tarjeta_transfer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="30dp"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/TextError"
+
+            >
+            <com.cacaopaycard.cacaopay.Utils.MaskEditText
+                android:id="@+id/edtxt_numero_tarjeta_transferencia"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="16sp"
+                android:maxLength="22"
+                android:maxLines="1"
+                android:inputType="phone"
+                android:hint="@string/str_tarjeta_clabe_transferir"
+                android:imeOptions="actionNext"
+                style="@style/PrimaryInputText"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_monto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:hint="@string/str_cantidad_a_transferir"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/TextError"
+            >
+            <com.blackcat.currencyedittext.CurrencyEditText
+                android:id="@+id/edtxt_monto_transferencia"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="16sp"
+                android:inputType="number"
+                app:allow_negative_values="false"
+                android:maxLength="10"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_nombre_beneficiario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            app:errorTextAppearance="@style/TextError"
+            android:hint="@string/str_nombre_beneficiario"
+            app:errorEnabled="true"
+            app:helperTextEnabled="true"
+            app:helperTextTextAppearance="@style/HelpText"
+
+            >
+            <EditText
+                android:id="@+id/edtxt_nombre_beneficiario_trf"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="16sp"
+                android:inputType="textPersonName"
+                android:maxLength="40"
+                android:maxLines="1"
+                android:imeOptions="actionNext"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_concepto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:hint="@string/str_concepto"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/TextError"
+            app:helperTextEnabled="true"
+            app:helperText="hasta 40 caracteres"
+            app:helperTextTextAppearance="@style/HelpText"
+            >
+            <EditText
+                android:id="@+id/edtxt_concepto_transferencia"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="16sp"
+                android:inputType="text"
+                android:maxLength="40"
+                android:imeOptions="actionDone"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_numero_referencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            app:errorTextAppearance="@style/TextError"
+            android:hint="@string/str_numero_de_referencia"
+            app:errorEnabled="true"
+            app:helperTextEnabled="true"
+            app:helperText="Puedes ingresar hasta 7 números"
+            app:helperTextTextAppearance="@style/HelpText"
+
+            >
+            <EditText
+                android:id="@+id/edtxt_numero_referencia_transfer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="16sp"
+                android:inputType="number"
+                android:maxLength="7"
+                android:maxLines="1"
+                android:imeOptions="actionNext"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginLeft="@dimen/margin_side"
+            android:layout_marginRight="@dimen/margin_side"
+            android:text="@string/str_siguiente"
+            android:layout_marginTop="65dp"
+            android:onClick="onClickHacerTransferencia"
+            style="@style/PrimaryAcionButton"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_cancelar"
+            android:layout_marginBottom="@dimen/margin_bottom"
+            android:layout_marginTop="@dimen/margin_top_cancelar"
+            android:layout_gravity="center"
+            android:onClick="onClickCancelarTransferencia"
+            style="@style/TextCancelar"
+            />
+
+
+
+    </LinearLayout>
+</ScrollView>

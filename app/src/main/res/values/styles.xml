@@ -1,0 +1,158 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+
+    <!-- App cacao -->
+    <style name="AppThemeCacaoLight" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/whitePrimary</item>
+        <item name="colorPrimaryDark">@color/colorBluePrimary</item>
+        <item name="colorAccent">@color/colorGreenPrimary</item>
+        <item name="otpViewStyle">@style/OtpWidget.OtpView</item>
+    </style>
+
+    <style name="AppThemeCacaoDark" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/whitePrimary</item>
+        <item name="colorPrimaryDark">@color/colorBluePrimary</item>
+        <item name="colorAccent">@color/colorGreenPrimary</item>
+        <item name="otpViewStyle">@style/OtpWidget.OtpView</item>
+    </style>
+
+
+    <style name="AppThemeEnrollCacao" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorBluePrimary</item>
+        <item name="colorPrimaryDark">@color/whitePrimary</item>
+        <item name="colorAccent">@color/colorGreenPrimary</item>
+        <item name="otpViewStyle">@style/OtpWidget.OtpView</item>
+
+    </style>
+
+    <!-- toolbar cacao -->
+    <style name="AppThemeToolbar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorBluePrimary</item>
+        <item name="colorPrimaryDark">@color/whitePrimary</item>
+        <item name="colorAccent">@color/colorGreenPrimary</item>
+        <item name="otpViewStyle">@style/OtpWidget.OtpView</item>
+
+        <item name="homeAsUpIndicator">@drawable/ic_flecha</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+    </style>
+
+    <!-- Popup theme toolbar cacao -->
+    <style name="PopupThemeToolbar" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorPrimary">@color/whitePrimary</item>
+        <item name="colorPrimaryDark">@color/colorBluePrimary</item>
+        <item name="colorAccent">@color/colorGreenPrimary</item>
+
+    </style>
+
+    <style name="AppThemeCacaoLight.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    
+    <style name="SwitchCompat">
+        <item name="thumbTint">@color/switch_color</item>
+        <item name="trackTint">@color/white_tranparent</item>
+
+    </style>
+
+    <!-- Style of buttons-->
+    <style name="PrimaryAcionButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_blue</item>
+        <item name="android:fontFamily">@font/helveticabold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/whitePrimary</item>
+
+    </style>
+
+    <!-- Button genérico -->
+    <style name="ButtonDashboard" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/whitePrimary</item>
+        <item name="android:fontFamily">@font/helveticabold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+    <!-- Style input -->
+    <style name="PrimaryInputText" parent="Widget.AppCompat.EditText">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/helveticaneue</item>
+        <item name="android:textColor">@color/colorBluePrimary</item>
+    </style>
+
+    <!-- Style titulos textViews -->
+    <style name="Titulo" parent="TextAppearance.AppCompat">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textColor">@color/colorBluePrimary</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/helveticabold</item>
+
+    </style>
+    <style name="TituloFragment" parent="TextAppearance.AppCompat">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textColor">@color/whitePrimary</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/helveticabold</item>
+
+    </style>
+
+
+    <!-- Style textButtonCancelar -->
+    <style name="TextCancelar" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorBluePrimary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/helveticaneuemedium</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+    <style name="TextError" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textColor">@color/red_color</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="HelpText" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/grayMessage</item>
+    </style>
+
+    <style name="SubtitleCacao" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorBluePrimary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/helveticaneuemedium</item>
+    </style>
+
+    <style name="TextMovimientos" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorBluePrimary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/helveticaneuemedium</item>
+    </style>
+
+    <style name="BottomText" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorBluePrimary</item>
+        <item name="android:fontFamily">@font/helveticaneuemedium</item>
+    </style>
+
+    <style name="TextComprobante" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/helveticaneue</item>
+    </style>
+
+    <style name="TextBottomActive" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">11sp</item>
+        <item name="android:fontFamily">@font/helveticaneue</item>
+        <item name="android:color">@color/colorBluePrimary</item>
+    </style>
+
+    <style name="TextBottomInactive" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">10sp</item>
+        <item name="android:fontFamily">@font/helveticaneue</item>
+        <item name="android:color">@color/colorGrayPrimary</item>
+    </style>
+
+
+</resources>

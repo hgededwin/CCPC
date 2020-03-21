@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="310dp"
+    android:layout_height="155dp"
+    android:id="@+id/cv_tarjeta"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center_horizontal"
+    app:cardElevation="10dp"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardCornerRadius="8dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+
+    >
+
+    <LinearLayout
+        android:id="@+id/linear_tarjeta_slider"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/tarjetas"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saldo"
+                android:textSize="16sp"
+                android:textColor="@color/whitePrimary"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                />
+            <TextView
+                android:id="@+id/txt_tarjeta_bloqueada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Tarjeta bloqueada"
+                android:textSize="14sp"
+                android:textColor="@color/colorBluePrimary"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/helveticabold"
+                android:paddingLeft="5dp"
+                android:visibility="invisible"
+                />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/txt_saldo_tarjeta_cv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="$7,500.00"
+            android:textSize="28sp"
+            android:fontFamily="@font/helveticabold"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="5dp"
+            android:textColor="@color/whitePrimary" />
+
+        <TextView
+            android:id="@+id/txt_numero_cuenta_cv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/whitePrimary"
+            android:text="**** **** **** 3111"
+            android:fontFamily="@font/couriernew"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+
+            />
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

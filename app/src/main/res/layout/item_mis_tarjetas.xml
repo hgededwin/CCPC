@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv_mis_tarjetas"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="10dp"
+    >
+<RelativeLayout
+    android:id="@+id/relative_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_color_contraste"
+    android:padding="15dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_saldo_mis_tarjetas_cv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$7,500.00"
+        android:textSize="22sp"
+        android:fontFamily="@font/helveticaneuemedium"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textColor="@color/whitePrimary" />
+
+    <TextView
+        android:id="@+id/txt_cuenta_mis_tarjetas_cv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/whitePrimary"
+        android:layout_below="@+id/txt_saldo_mis_tarjetas_cv"
+        android:text="1234 12345 1234 3111"
+        android:fontFamily="@font/couriernewbold"
+        android:layout_centerHorizontal="true"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp"
+        />
+
+    <ImageView
+        android:id="@+id/img_mastercard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        app:srcCompat="@drawable/ic_mastercard"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/txt_cuenta_mis_tarjetas_cv"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        >
+        <ImageView
+            android:id="@+id/img_bloquear_item_cv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_pass"
+            />
+        <ImageView
+            android:id="@+id/img_editar_item_cv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_edit_item_white"
+            android:layout_marginLeft="30dp"
+            />
+        <ImageView
+            android:id="@+id/img_eliminar_item_cv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_delete_item_white"
+            android:layout_marginLeft="30dp"
+            />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
+
+</androidx.cardview.widget.CardView>

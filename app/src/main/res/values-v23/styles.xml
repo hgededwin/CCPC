@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppThemeCacaoLight" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/whitePrimary</item>
+        <item name="colorPrimaryDark">@color/whitePrimary</item>
+        <item name="colorAccent">@color/colorGreenPrimary</item>
+        <item name="otpViewStyle">@style/OtpWidget.OtpView</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="AppThemeCacaoDark" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/whitePrimary</item>
+        <item name="colorPrimaryDark">@color/colorBluePrimary</item>
+        <item name="colorAccent">@color/colorGreenPrimary</item>
+        <item name="otpViewStyle">@style/OtpWidget.OtpView</item>
+    </style>
+
+</resources>

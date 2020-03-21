@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainDashboardActivity"
+    android:background="@color/whitePrimary"
+    tools:showIn="@layout/app_bar_main_dashboard">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager_menu"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:ci_drawable="@drawable/indicator_circle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pager_menu">
+
+    </me.relex.circleindicator.CircleIndicator>
+
+    <TextView
+        android:id="@+id/txt_transfer_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/helveticabold"
+        android:paddingLeft="15dp"
+        android:text="Transferencia"
+        android:textColor="@color/colorBluePrimary"
+        app:layout_constraintTop_toBottomOf="@+id/indicator" />
+
+    <Button
+        android:id="@+id/btn_recibir_transferencias_db"
+        style="@style/ButtonDashboard"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:background="@drawable/button_dashboard_recibir"
+        android:drawableLeft="@drawable/ic_boton_recibir_transfer"
+        android:drawablePadding="-10dp"
+        android:onClick="onClickRecibirPago"
+        android:paddingLeft="10dp"
+
+        android:text="Recibir dinero"
+        app:layout_constraintEnd_toStartOf="@+id/btn_transferencia_db"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_transfer_dashboard" />
+
+    <Button
+        android:id="@+id/btn_transferencia_db"
+        style="@style/ButtonDashboard"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:background="@drawable/button_dashboard_mandar"
+        android:drawableLeft="@drawable/ic_boton_mandar_transfer"
+        android:drawablePadding="-10dp"
+        android:onClick="onClickTransferencias"
+        android:paddingLeft="10dp"
+        android:text="Mandar dinero"
+
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_recibir_transferencias_db"
+        app:layout_constraintTop_toBottomOf="@+id/txt_transfer_dashboard" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

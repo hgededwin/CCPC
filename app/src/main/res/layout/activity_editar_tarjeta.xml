@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitePrimary"
+    tools:context=".AdminCuenta.Tarjetas.EditarTarjetaActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_editar_tarjetas"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        app:navigationIcon="@drawable/ic_flecha_white"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:background="@color/colorBluePrimary"
+        app:title=" "
+        android:elevation="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/whitePrimary"
+            android:text="@string/str_edita_tu_tarjeta"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            />
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/txt_titulo_editar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_editar_tarjetas"
+        android:text="Edita los datos de tu tarjeta"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="20dp"
+        style="@style/Titulo"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_nombre_tarjeta_editar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/txt_titulo_editar"
+        app:errorEnabled="true"
+        >
+
+        <EditText
+            android:id="@+id/edtxt_nickname_editar"
+            style="@style/PrimaryInputText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/alias"
+            android:inputType="textPersonName" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_nuevo_nip_editar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/til_nombre_tarjeta_editar"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        app:errorEnabled="true"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/colorBluePrimary">
+
+        <EditText
+            android:id="@+id/edtxt_nuevo_nip_editar"
+            style="@style/PrimaryInputText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/nip"
+            android:inputType="numberPassword"
+            android:maxLength="4"
+            android:textColorHint="@color/colorBluePrimary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:layout_above="@+id/txt_cancelar_edit"
+        android:layout_width="match_parent"
+        android:layout_marginRight="@dimen/margin_side"
+        android:layout_marginLeft="@dimen/margin_side"
+        android:layout_height="@dimen/button_height"
+        android:layout_centerHorizontal="true"
+        android:text= "@string/str_guardar_salir"
+        android:layout_marginBottom="@dimen/margin_top_cancelar"
+        style="@style/PrimaryAcionButton"
+        android:onClick="onClickGuardarCambiosTarjeta"
+
+        />
+    <TextView
+        android:id="@+id/txt_cancelar_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_cancelar"
+        android:layout_marginBottom="@dimen/margin_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClickCancelarEdicion"
+        style="@style/TextCancelar"
+        />
+
+</RelativeLayout>

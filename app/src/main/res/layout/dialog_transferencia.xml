@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".Transferencias.TransferenciaActivity"
+
+    >
+
+    <TextView
+        android:id="@+id/txt_titulo_otp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_pin"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        style="@style/Titulo"
+        />
+    <TextView
+        android:id="@+id/txt_leyenda_otp"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:text="@string/str_ingrese_pin_leyenda"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:fontFamily="@font/helveticaneuemedium"
+        android:textColor="@color/colorBluePrimary"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="16sp"
+        />
+    <com.mukesh.OtpView
+        android:id="@+id/otp_transferencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:itemBackground="@drawable/edtxt_gray_corner"
+        app:lineColor="@android:color/transparent"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        app:itemCount="6"
+        app:itemHeight="36dp"
+        app:itemWidth="36dp"
+        android:inputType="number"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_bottom_sheet_mov"
+        />
+
+
+</LinearLayout>
