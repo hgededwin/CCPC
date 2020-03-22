@@ -15,6 +15,7 @@ public class URLCacao {
     public final static String URL_CREAR_CUENTA = HOST_NAME + API + "cuenta/crear";
     public final static String URL_LOGIN = HOST_NAME + API + "cuenta/login";
     public final static String URL_RECUPERAR_PASSWORD = HOST_NAME + API + "cuenta/recuperar/clave";
+    public final static String URL_CONSULTA_TARJETA = HOST_NAME + API + "tarjeta/consultar";
 
 
     //private final static String HOST_NAME = "https://cocoa.cacaopaycard.com/";

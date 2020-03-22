@@ -95,7 +95,7 @@ public class RegistroExitosoActivity extends AppCompatActivity {
                 break;
 
             case ENVIO_PASSWORD:
-                
+
                 setResult(RESULT_OK);
                 finish();
 
