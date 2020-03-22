@@ -2,6 +2,8 @@ package com.cacaopaycard.cacaopay.Registro.RecuperacionPassword;
 
 import android.content.Intent;
 import androidx.annotation.Nullable;
+
+import com.cacaopaycard.cacaopay.mvp.util.URLCacao;
 import com.google.android.material.textfield.TextInputLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -142,13 +144,17 @@ public class RecuperacionPassInPhoneActivity extends AppCompatActivity {
     public void forgotPass(final int emailPhone){
 
         final Peticion peticion = new Peticion(this, requestQueue);
-        peticion.addParams(getString(R.string.email_phone_params), edtxtEmailPhone.getText().toString());
-        peticion.addParams(getString(R.string.app_id_params), APP_ID);
 
-        peticion.stringRequest(Request.Method.POST, getString(R.string.url_forgot_pass), new Response.Listener<String>() {
+        peticion.addParams("Correo", edtxtEmail.getText().toString());
+
+        Log.e("email -->", edtxtEmail.getText().toString());
+
+        peticion.stringRequest(Request.Method.POST, URLCacao.URL_RECUPERAR_PASSWORD, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 peticion.dismissProgressDialog();
+                Log.e(Constantes.TAG, response);
+
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     System.out.println(jsonObject);

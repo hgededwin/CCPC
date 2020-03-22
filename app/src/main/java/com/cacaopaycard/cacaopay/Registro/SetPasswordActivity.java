@@ -140,8 +140,6 @@ public class SetPasswordActivity extends AppCompatActivity {
 
     public void updatePassword(){
 
-        //System.out.println("PIN" + Integer.parseInt(pin));
-
         final Peticion setPassRequest = new Peticion(this,requestQueue);
         //setPassRequest.addParamsInteger(getString(R.string.pin_param), Integer.parseInt(pin));
         setPassRequest.addParamsString("NumeroCelular", bundleRegistro.getString("telefono"));
@@ -164,11 +162,6 @@ public class SetPasswordActivity extends AppCompatActivity {
                     String email = jsonObject.getString("Correo");
                     String codeResponse = jsonObject.getString("ResponseCode");
                     String message = jsonObject.getString("Mensaje");
-
-                    /* JSONObject objectResponse = jsonObject.getJSONObject("ResponseCacaoAPI");
-                    JSONObject subObjectResponse = objectResponse.getJSONObject("ResponseCacaoAPI");;
-                    String codeResponse = subObjectResponse.getString("CodRespuesta");
-                    String message = subObjectResponse.getString("DescRespuesta"); */
 
                     if(codeResponse.equals("00")){
                         Log.i(Constantes.TAG, message);
