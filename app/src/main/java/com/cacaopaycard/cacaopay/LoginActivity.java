@@ -188,54 +188,33 @@ public class LoginActivity extends AppCompatActivity {
 
         final Peticion peticionLogin = new Peticion(this, requestQueue);
 
-        peticionLogin.addParams("Correo", edtxtTelefono.getText().toString());
-        peticionLogin.addParams(getString(R.string.pass_param), edtxtPassword.getText().toString());
+        peticionLogin.addParamsString("Correo", edtxtTelefono.getText().toString());
+        peticionLogin.addParamsString(getString(R.string.pass_param), edtxtPassword.getText().toString());
 
-        peticionLogin.stringRequest(Request.Method.POST, URLCacao.URL_LOGIN, new Response.Listener<String>() {
+        peticionLogin.jsonObjectRequest(Request.Method.POST, URLCacao.URL_LOGIN, new Response.Listener<JSONObject>() {
             @Override
-            public void onResponse(String response) {
+            public void onResponse(JSONObject response) {
                 peticionLogin.dismissProgressDialog();
 
-                Log.e(TAG,response);
+                Log.e(TAG,response.toString());
 
                 try {
-                    JSONObject jsonObject = new JSONObject(response);
 
-                    int success = jsonObject.getInt("success");
+                    String responseCode = response.getString("ResponseCode");
 
-                    if (success == 1) {
+                    if (responseCode.equals("00")) {
 
                         if (!usuario.estaRegistrado())
                             usuario.registrarUsuario();
 
-                        JSONObject jsonObjectLogin = jsonObject.getJSONObject("login");
-
-                        Log.i(Constantes.TAG, jsonObjectLogin.toString());
-
-                        String id = jsonObjectLogin.getString("id");
                         //JSONObject card = jsonObjectLogin.getJSONObject("card");
-                        String address = jsonObjectLogin.getString("address");
 
-                        usuario.setTelefono(jsonObjectLogin.getString("phone"));
-                        usuario.setCorreo(jsonObjectLogin.getString("email"));
-                        usuario.setNombreUsuario(jsonObjectLogin.getString("name"));
-                        usuario.setBirthDate(jsonObjectLogin.getString("birth_date"));
-
-                        String urlImage = jsonObjectLogin.getString("avatar");
-                        if (urlImage != null)
-                            usuario.setUrlAvatar(urlImage);
-
-
-                        Bundle bundle = new Bundle();
-                        bundle.putString("idLogin", id);
-                        bundle.putString("address", address);
-
-                        /*Bundle bundleCard = new Bundle();
-                        bundleCard.putString("num_card", card.getString("card"));
-                        bundleCard.putString("nickname_card", card.getString("nickname"));*/
+                        //usuario.setTelefono(jsonObjectLogin.getString("phone"));
+                        usuario.setCorreo(response.getString("Correo"));
+                        //usuario.setNombreUsuario(jsonObjectLogin.getString("name"));
+                        //usuario.setBirthDate(jsonObjectLogin.getString("birth_date"));
 
                         Intent intentEntrar = new Intent(LoginActivity.this, MainContainer.class);
-                        intentEntrar.putExtra("params_personal", bundle);
                         //intentEntrar.putExtra("info_card",bundleCard);
                         startActivity(intentEntrar);
                         setResult(RESULT_OK);
@@ -243,7 +222,7 @@ public class LoginActivity extends AppCompatActivity {
 
                     } else {
 
-                        String message = jsonObject.getString("message");
+                        String message = response.getString("message");
                         Log.e(Constantes.TAG, message);
 
                         new MaterialDialog.Builder(LoginActivity.this)
