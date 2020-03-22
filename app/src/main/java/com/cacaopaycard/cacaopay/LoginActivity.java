@@ -191,15 +191,12 @@ public class LoginActivity extends AppCompatActivity {
         peticionLogin.addParams("Correo", edtxtTelefono.getText().toString());
         peticionLogin.addParams(getString(R.string.pass_param), edtxtPassword.getText().toString());
 
-        Log.e("correo -->", edtxtTelefono.getText().toString());
-        Log.e("password -->", edtxtPassword.getText().toString());
-
         peticionLogin.stringRequest(Request.Method.POST, URLCacao.URL_LOGIN, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 peticionLogin.dismissProgressDialog();
 
-                Log.e(Constantes.TAG, response.toString());
+                Log.e(TAG,response);
 
                 try {
                     JSONObject jsonObject = new JSONObject(response);

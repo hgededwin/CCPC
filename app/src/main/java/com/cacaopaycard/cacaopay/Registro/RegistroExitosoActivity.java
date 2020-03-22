@@ -13,6 +13,7 @@ import com.cacaopaycard.cacaopay.R;
 
 import static com.cacaopaycard.cacaopay.Constantes.AGREGAR_TARJETA;
 import static com.cacaopaycard.cacaopay.Constantes.EDITAR_TARJETA;
+import static com.cacaopaycard.cacaopay.Constantes.ENVIO_PASSWORD;
 import static com.cacaopaycard.cacaopay.Constantes.RECUPERACION_PASSWORD;
 import static com.cacaopaycard.cacaopay.Constantes.REGISTRO;
 import static com.cacaopaycard.cacaopay.Constantes.TRANSFERENCIA;
@@ -51,6 +52,10 @@ public class RegistroExitosoActivity extends AppCompatActivity {
             titulo.setText(R.string.str_titulo_pass_change);
             leyenda.setText(R.string.str_leyenda_cambio_pass_exitoso);
             btnContinuar.setText(getString(R.string.str_entendido));
+        } else if (padre == ENVIO_PASSWORD) {
+            titulo.setText("Verifica tu correo electrónico");
+            leyenda.setText("Se ha enviado un correo electrónico con las instrucciones para recuperar tu contraseña");
+            btnContinuar.setText(getString(R.string.str_entendido));
         } else {
             titulo.setText(R.string.str_registro_exitoso);
             leyenda.setText(R.string.str_texto_registro_terminado);
@@ -88,6 +93,11 @@ public class RegistroExitosoActivity extends AppCompatActivity {
                 setResult(RESULT_OK);
                 finish();
                 break;
+
+            case ENVIO_PASSWORD:
+                
+                setResult(RESULT_OK);
+                finish();
 
             case REGISTRO:
                 // registro

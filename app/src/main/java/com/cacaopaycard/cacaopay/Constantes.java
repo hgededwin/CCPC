@@ -12,6 +12,7 @@ public class Constantes {
     public final static String TAG = "CacaoPay";
     public final static int USER_REGISTERED = 11;
     public final static int CHANGED_PIN_CANCELED = 12;
+    public final static int ENVIO_PASSWORD = 13;
     // CC = producción
     // CON = Staging
     public final static String APP_ID = "CC";

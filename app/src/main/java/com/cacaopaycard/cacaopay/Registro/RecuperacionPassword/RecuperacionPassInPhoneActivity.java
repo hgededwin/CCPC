@@ -3,6 +3,9 @@ package com.cacaopaycard.cacaopay.Registro.RecuperacionPassword;
 import android.content.Intent;
 import androidx.annotation.Nullable;
 
+import com.android.volley.VolleyError;
+import com.cacaopaycard.cacaopay.Registro.RegistroExitosoActivity;
+import com.cacaopaycard.cacaopay.Registro.SetPasswordActivity;
 import com.cacaopaycard.cacaopay.mvp.util.URLCacao;
 import com.google.android.material.textfield.TextInputLayout;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,7 +31,9 @@ import org.json.JSONObject;
 
 import static com.cacaopaycard.cacaopay.Constantes.APP_ID;
 import static com.cacaopaycard.cacaopay.Constantes.CHANGED_PIN_CANCELED;
+import static com.cacaopaycard.cacaopay.Constantes.ENVIO_PASSWORD;
 import static com.cacaopaycard.cacaopay.Constantes.RECUPERACION_PASSWORD;
+import static com.cacaopaycard.cacaopay.Constantes.REGISTRO;
 
 public class RecuperacionPassInPhoneActivity extends AppCompatActivity {
 
@@ -52,6 +57,8 @@ public class RecuperacionPassInPhoneActivity extends AppCompatActivity {
         edtxtEmail = findViewById(R.id.edtxt_email_recover);
         tilEmail = findViewById(R.id.til_email_recover);
         tilTelefono = findViewById(R.id.til_pass);
+
+        edtxtEmailPhone.setVisibility(View.GONE);
 
         usuario = new Usuario(this);
 
@@ -97,16 +104,12 @@ public class RecuperacionPassInPhoneActivity extends AppCompatActivity {
     public void onClickValidarTelefono(View view) {
 
         // temporal
-        if(!edtxtEmailPhone.getText().toString().matches("[0-9]{10}")){
-
-            tilTelefono.setError("teléfono no válido");
-
-        } else if(edtxtEmail.getText().toString().isEmpty()) {
+       if(edtxtEmail.getText().toString().isEmpty()) {
             tilEmail.setError("Debe ingresar el correo");
         } else {
 
-            telefonoTemporal = edtxtEmailPhone.getText().toString();
-            forgotPass(PHONE);
+           // telefonoTemporal = edtxtEmailPhone.getText().toString();
+            forgotPass();
         }
 
 
@@ -141,20 +144,70 @@ public class RecuperacionPassInPhoneActivity extends AppCompatActivity {
     }
 
 
-    public void forgotPass(final int emailPhone){
+    public void forgotPass(){
 
         final Peticion peticion = new Peticion(this, requestQueue);
 
-        peticion.addParams("Correo", edtxtEmail.getText().toString());
+        peticion.addParamsString("Correo", edtxtEmail.getText().toString());
 
         Log.e("email -->", edtxtEmail.getText().toString());
 
-        peticion.stringRequest(Request.Method.POST, URLCacao.URL_RECUPERAR_PASSWORD, new Response.Listener<String>() {
+        peticion.jsonObjectRequest(Request.Method.POST, URLCacao.URL_RECUPERAR_PASSWORD, new Response.Listener() {
+            @Override
+            public void onResponse(Object response) {
+                peticion.dismissProgressDialog();
+                Log.e(Constantes.TAG, String.valueOf(response));
+
+                try {
+                    JSONObject jsonObject = new JSONObject(String.valueOf(response));
+                    Log.e(Constantes.TAG, response.toString());
+
+                    String email = jsonObject.getString("Correo");
+                    String codeResponse = jsonObject.getString("ResponseCode");
+                    String message = jsonObject.getString("Mensaje");
+
+                    if(codeResponse.equals("00")){
+                        Log.i(Constantes.TAG, message);
+
+                        usuario.setCorreo(edtxtEmail.getText().toString());
+                        Intent intent = new Intent(RecuperacionPassInPhoneActivity.this, RegistroExitosoActivity.class);
+                        intent.putExtra("padre", ENVIO_PASSWORD);
+                        startActivityForResult(intent, ENVIO_PASSWORD);
+                        overridePendingTransition(R.anim.left_in, R.anim.left_out);
+
+                    } else {
+                        Log.e(Constantes.TAG, message);
+                        new  MaterialDialog.Builder(RecuperacionPassInPhoneActivity.this)
+                                .title("¡Error!")
+                                .content(message)
+                                .positiveText("Ok")
+                                .show();
+                    }
+
+
+                }catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                peticion.dismissProgressDialog();
+                Log.e("RESPONSE ERROR ..<", "error");
+
+                new  MaterialDialog.Builder(RecuperacionPassInPhoneActivity.this)
+                        .title("¡Error!")
+                        .content("Error al obtener la información")
+                        .positiveText("Ok")
+                        .show();
+            }
+        });
+
+      /*  peticion.stringRequest(Request.Method.POST, URLCacao.URL_RECUPERAR_PASSWORD, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 peticion.dismissProgressDialog();
-                Log.e(Constantes.TAG, response);
-
+                Log.e(Constantes.TAG, response.toString());
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     System.out.println(jsonObject);
@@ -187,17 +240,16 @@ public class RecuperacionPassInPhoneActivity extends AppCompatActivity {
                             forgotPass(EMAIL);
                     }
 
-                    /*Intent intent = new Intent(RecuperacionPassInPhoneActivity.this, RecuperacionPasswordActivity.class);
+                    Intent intent = new Intent(RecuperacionPassInPhoneActivity.this, RecuperacionPasswordActivity.class);
                     startActivityForResult(intent,RECUPERACION_PASSWORD);
                     overridePendingTransition(R.anim.left_in,R.anim.left_out);
-*/
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
 
             }
-        });
-
+        });*/
 
     }
 }
