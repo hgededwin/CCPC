@@ -39,10 +39,10 @@
 
 
     <!-- Establecer contraseña -->
-    <string name="str_establecer_pass">Crea un PIN de acceso de 6 dígitos</string>
-    <string name="str_password">PIN</string>
-    <string name="str_contrasenia">PIN</string>
-    <string name="str_crea_password">Crea un PIN</string>
+    <string name="str_establecer_pass">Crea una contraseña de acceso de 8 caracteres</string>
+    <string name="str_password">Contraseña</string>
+    <string name="str_contrasenia">Contraseña</string>
+    <string name="str_crea_password">Crea una contraseña</string>
 
 
     <!-- Éxito -->
@@ -58,7 +58,7 @@
 
 
     <!-- Login -->
-    <string name="str_olvide_password"><u>Olvidé mi PIN</u></string>
+    <string name="str_olvide_password"><u>Olvidé mi contraseña</u></string>
     <string name="str_iniciar_sesion">Iniciar sesión</string>
     <string name="str_cambie_celular">Cambié de celular</string>
     <string name="str_crear_cuenta">Crea una cuenta</string>
@@ -118,12 +118,12 @@
     <string name="str_leyenda_verificacion">Introduce el código de activación que te hemos enviado</string>
     <string name="str_sms_no_recibido">No lo recibí, envíamelo nuevamente</string>
     <string name="str_verificar">Verificar</string>
-    <string name="str_leyenda_recuperacion">Crea un nuevo PIN de acceso de 6 dígitos</string>
-    <string name="str_titulo_crea_nuevo_pass">Reestablece tu PIN</string>
-    <string name="str_instruccion_pass">Debe contener 6 dígitos.</string>
+    <string name="str_leyenda_recuperacion">Crea una nueva contraseña de acceso de 8 caracteres</string>
+    <string name="str_titulo_crea_nuevo_pass">Reestablece tu contraseña</string>
+    <string name="str_instruccion_pass">Debe contener 8 caracteres.</string>
 
     <!-- Recuperación de contraseña, validación teléfono -->
-    <string name="str_leyenda_validar_cuenta_rec_pass">Te enviaremos un código para reestablecer tu PIN. Necesitamos la información asociada a tu cuenta.</string>
+    <string name="str_leyenda_validar_cuenta_rec_pass">Te enviaremos un código para reestablecer tu contraseña. Necesitamos la información asociada a tu cuenta.</string>
 
 
     <!-- Item tarjeta -->

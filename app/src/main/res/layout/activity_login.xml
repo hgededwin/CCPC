@@ -91,9 +91,8 @@
                         style="@style/PrimaryInputText"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint="@string/str_telefono"
-                        android:inputType="phone"
-                        android:maxLength="10" />
+                        android:hint="@string/str_correo_electronico"
+                        android:inputType="textEmailAddress" />
                 </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -119,8 +118,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:hint="@string/str_contrasenia"
-                        android:inputType="numberPassword"
-                        android:maxLength="6"
+                        android:inputType="textPassword"
+                        android:maxLength="8"
                         android:textColor="@color/colorBluePrimary"
                         android:textColorHint="@color/colorBluePrimary"
 

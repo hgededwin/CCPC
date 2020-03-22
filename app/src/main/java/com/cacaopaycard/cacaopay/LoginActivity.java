@@ -163,10 +163,7 @@ public class LoginActivity extends AppCompatActivity {
             tilTelefono.setError("Se debe ingresar un númro de teléfono");
         } else if(edtxtPassword.getText().toString().isEmpty()){
             tilPass.setError("Debe ingresar un número de teléfono");
-        } else if(!edtxtPassword.getText().toString().matches("[0-9]{6}")){
-            tilPass.setError("Su contraseña no es valida");
-        } else {
-
+        }else {
             loginRequest();
         }
 
@@ -186,19 +183,13 @@ public class LoginActivity extends AppCompatActivity {
 
     public void loginRequest(){
 
-        System.out.println("device" + Settings.Secure.getString(this.getContentResolver(), Settings.Secure.ANDROID_ID));
-        String uuid = Settings.Secure.getString(this.getContentResolver(), Settings.Secure.ANDROID_ID);
+      //  System.out.println("device" + Settings.Secure.getString(this.getContentResolver(), Settings.Secure.ANDROID_ID));
+        //  String uuid = Settings.Secure.getString(this.getContentResolver(), Settings.Secure.ANDROID_ID);
 
         final Peticion peticionLogin = new Peticion(this, requestQueue);
 
-        //peticionLogin.addParams(getString(R.string.phone_params),edtxtTelefono.getText().toString());
-        //peticionLogin.addParams(getString(R.string.device_uuid_params), uuid);
-        //peticionLogin.addParams(getString(R.string.app_id_params), APP_ID);
-
-
         peticionLogin.addParams("Correo", edtxtTelefono.getText().toString());
-        peticionLogin.addParams(getString(R.string.pass_param),edtxtPassword.getText().toString());
-
+        peticionLogin.addParams(getString(R.string.pass_param), edtxtPassword.getText().toString());
 
         peticionLogin.stringRequest(Request.Method.POST, URLCacao.URL_LOGIN, new Response.Listener<String>() {
             @Override
@@ -206,6 +197,7 @@ public class LoginActivity extends AppCompatActivity {
                 peticionLogin.dismissProgressDialog();
 
                 Log.e(TAG,response);
+
                 try {
                     JSONObject jsonObject = new JSONObject(response);
 
