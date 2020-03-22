@@ -209,7 +209,7 @@
     <string name="card_number_param">card_number</string>
     <string name="phone_code_params">phone_code</string>
     <string name="version_params">Version</string>
-    <string name="pass_param">password</string>
+    <string name="pass_param">Password</string>
     <string name="pass_param_confirmation">password_confirmation</string>
     <string name="numero_tarjeta_param">numero_tarjeta</string>
     <string name="numero_tarjeta_emisora_param">numero_tarjeta_emisora</string>

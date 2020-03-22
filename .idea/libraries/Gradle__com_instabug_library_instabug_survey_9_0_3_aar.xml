@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="Gradle: com.instabug.library:instabug-survey:9.0.3@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/aaada23941ff8ebde493a44816a3c0c3/jetified-instabug-survey-9.0.3/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/aaada23941ff8ebde493a44816a3c0c3/jetified-instabug-survey-9.0.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/aaada23941ff8ebde493a44816a3c0c3/jetified-instabug-survey-9.0.3/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.instabug.library/instabug-survey/9.0.3/a9cbd4585c41feb2f7f229fc814c5fc3821899a3/instabug-survey-9.0.3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.instabug.library/instabug-survey/9.0.3/a9cbd4585c41feb2f7f229fc814c5fc3821899a3/instabug-survey-9.0.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

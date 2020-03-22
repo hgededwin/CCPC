@@ -2,16 +2,9 @@ package com.cacaopaycard.cacaopay.mvp.util;
 
 public class URLCacao {
 
-    //private final static String HOST_NAME = "https://cocoa.cacaopaycard.com/";
-    private final static String HOST_NAME = "http://146.20.201.37/";
-    //private final static String HOST_NAME = "https://cocoa-staging.cacaopaycard.com/";
-    //private final static String API = "api/v1/";
-    private final static String API = "wsCacaoParabilia/api/";
 
-    /*public final static String URL_USER_DATA = HOST_NAME + API + "user_data";
-    public final static String URL_CARD_BALANCE = HOST_NAME + API + "card_balance";
-    public final static String URL_CARD_MOVEMENTS = HOST_NAME + API + "moves";
-    public final static String URL_LOCK_CARD =  HOST_NAME + API + "locks_blocks_cards";*/
+    private final static String HOST_NAME = "http://167.250.76.148:8888/";
+    private final static String API = "api/cacao/";
 
     public final static String URL_USER_DATA = HOST_NAME + API + "user_data"; // sin implementar
     public final static String URL_CARD_BALANCE = HOST_NAME + API + "card_balance"; // sin implementar
@@ -22,7 +15,17 @@ public class URLCacao {
     public final static String URL_CREAR_CUENTA = HOST_NAME + API + "cuenta/crear";
     public final static String URL_LOGIN = HOST_NAME + API + "Login";
 
-    
+
+
+    //private final static String HOST_NAME = "https://cocoa.cacaopaycard.com/";
+    //private final static String HOST_NAME = "https://cocoa-staging.cacaopaycard.com/";
+    //private final static String API = "api/v1/";
+
+    /*public final static String URL_USER_DATA = HOST_NAME + API + "user_data";
+    public final static String URL_CARD_BALANCE = HOST_NAME + API + "card_balance";
+    public final static String URL_CARD_MOVEMENTS = HOST_NAME + API + "moves";
+    public final static String URL_LOCK_CARD =  HOST_NAME + API + "locks_blocks_cards";*/
+
     /*
     <string name="url_login">https://cocoa.cacaopaycard.com/api/v1/login_user</string>
     <string name="url_update_password">https://cocoa.cacaopaycard.com/api/v1/update_password</string>

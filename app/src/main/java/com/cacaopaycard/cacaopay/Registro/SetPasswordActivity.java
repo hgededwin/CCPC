@@ -160,24 +160,31 @@ public class SetPasswordActivity extends AppCompatActivity {
                     //JSONObject jsonObject = new JSONObject(response);
                     JSONObject jsonObject = new JSONObject(String.valueOf(response));
                     Log.e(Constantes.TAG, response.toString());
-                    JSONObject objectResponse = jsonObject.getJSONObject("ResponseCacaoAPI");
+
+                    String email = jsonObject.getString("Correo");
+                    String codeResponse = jsonObject.getString("ResponseCode");
+                    String message = jsonObject.getString("Mensaje");
+
+                    /* JSONObject objectResponse = jsonObject.getJSONObject("ResponseCacaoAPI");
                     JSONObject subObjectResponse = objectResponse.getJSONObject("ResponseCacaoAPI");;
                     String codeResponse = subObjectResponse.getString("CodRespuesta");
-                    String message = subObjectResponse.getString("DescRespuesta");
+                    String message = subObjectResponse.getString("DescRespuesta"); */
 
-                    if(codeResponse.equals("0000")){
+                    if(codeResponse.equals("00")){
                         Log.i(Constantes.TAG, message);
                         if(flujo == REGISTRO && !usuario.estaRegistrado()) {
                             usuario.registrarUsuario();
                             Intent intent = new Intent(SetPasswordActivity.this, RegistroExitosoActivity.class);
                             intent.putExtra("padre", REGISTRO);
+
                             usuario.setTelefono(bundleRegistro.getString("telefono"));
                             usuario.setNombreUsuario(bundleRegistro.getString("nombre"));
                             usuario.setCorreo(bundleRegistro.getString("correo"));
+
                             startActivityForResult(intent, REGISTRO);
                             overridePendingTransition(R.anim.left_in,R.anim.left_out);
 
-                        } else{
+                        } else {
                             Intent intent = new Intent(SetPasswordActivity.this, RegistroExitosoActivity.class);
                             intent.putExtra("padre", RECUPERACION_PASSWORD);
                             startActivityForResult(intent, RECUPERACION_PASSWORD);

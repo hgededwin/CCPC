@@ -194,7 +194,9 @@ public class LoginActivity extends AppCompatActivity {
         //peticionLogin.addParams(getString(R.string.phone_params),edtxtTelefono.getText().toString());
         //peticionLogin.addParams(getString(R.string.device_uuid_params), uuid);
         //peticionLogin.addParams(getString(R.string.app_id_params), APP_ID);
-        peticionLogin.addParams("NombreUsuario", edtxtTelefono.getText().toString());
+
+
+        peticionLogin.addParams("Correo", edtxtTelefono.getText().toString());
         peticionLogin.addParams(getString(R.string.pass_param),edtxtPassword.getText().toString());
 
 

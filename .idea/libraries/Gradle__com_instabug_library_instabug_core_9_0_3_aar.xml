@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="Gradle: com.instabug.library:instabug-core:9.0.3@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f8cb04400e2def1dec1c1d582a63b6ca/jetified-instabug-core-9.0.3/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f8cb04400e2def1dec1c1d582a63b6ca/jetified-instabug-core-9.0.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f8cb04400e2def1dec1c1d582a63b6ca/jetified-instabug-core-9.0.3/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.instabug.library/instabug-core/9.0.3/4a606fe72954f97d20c791f0e8f627608cbcfc9d/instabug-core-9.0.3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.instabug.library/instabug-core/9.0.3/e54ab1cbe84ca681899b5f8acfcefb1c21422cc7/instabug-core-9.0.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
