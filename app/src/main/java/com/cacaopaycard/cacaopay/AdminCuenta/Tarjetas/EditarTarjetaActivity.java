@@ -2,6 +2,8 @@ package com.cacaopaycard.cacaopay.AdminCuenta.Tarjetas;
 
 import android.content.Intent;
 import androidx.annotation.Nullable;
+
+import com.cacaopaycard.cacaopay.mvp.util.URLCacao;
 import com.google.android.material.textfield.TextInputLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -113,15 +115,22 @@ public class EditarTarjetaActivity extends AppCompatActivity {
 
     public void cambiosTerjetas(){
         final Peticion requestChangeNIP  =  new Peticion(this, requestQueue);
-        requestChangeNIP.addParams(getString(R.string.card_number_param), numeroTarjeta);
+
+       /* requestChangeNIP.addParams(getString(R.string.card_number_param), numeroTarjeta);
         requestChangeNIP.addParams(getString(R.string.nip_param), edtxtNip.getText().toString());
         requestChangeNIP.addParams(getString(R.string.nip_confirmation_param), edtxtNip.getText().toString());
-        requestChangeNIP.addParams(getString(R.string.nickname_param), edtxtNombreTarjeta.getText().toString().isEmpty() ? " " : edtxtNombreTarjeta.getText().toString());
+        requestChangeNIP.addParams(getString(R.string.nickname_param), edtxtNombreTarjeta.getText().toString().isEmpty() ? " " : edtxtNombreTarjeta.getText().toString()); */
 
-        requestChangeNIP.stringRequest(Request.Method.POST, getString(R.string.url_change_nip), new Response.Listener<String>() {
+
+        requestChangeNIP.addParamsString("Tarjeta", numeroTarjeta);
+        requestChangeNIP.addParamsString("NIPNuevo", edtxtNip.getText().toString());
+
+        requestChangeNIP.stringRequest(Request.Method.POST, URLCacao.URL_CAMBIAR_NIP, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 requestChangeNIP.dismissProgressDialog();
+                Log.e(Constantes.TAG, response);
+
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     int success = jsonObject.getInt("succes");

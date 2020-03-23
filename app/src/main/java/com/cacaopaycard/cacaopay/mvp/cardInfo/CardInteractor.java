@@ -16,6 +16,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.cacaopaycard.cacaopay.mvp.util.URLCacao.URL_BLOQUEAR_TARJETA;
 import static com.cacaopaycard.cacaopay.mvp.util.URLCacao.URL_CARD_BALANCE;
 import static com.cacaopaycard.cacaopay.mvp.util.URLCacao.URL_LOCK_CARD;
 
@@ -69,7 +70,7 @@ public class CardInteractor {
     public void lockCard(final boolean newStatus, final String card, final CardBalanceRequest listener){
         final String lockUnlockDesired = newStatus ? "28": "00";
         Log.e(TAG,lockUnlockDesired);
-        StringRequest request = new StringRequest(Request.Method.POST, URL_LOCK_CARD, new Response.Listener<String>() {
+        StringRequest request = new StringRequest(Request.Method.POST, URL_BLOQUEAR_TARJETA, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 Log.e(TAG, response);
@@ -103,8 +104,8 @@ public class CardInteractor {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
-                params.put("card_number", card);
-                params.put("status_desired", lockUnlockDesired);
+                params.put("Tarjeta", card);
+                params.put("MotivoBloqueo", "004");
                 return params;
             }
         };

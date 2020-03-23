@@ -16,7 +16,11 @@ public class URLCacao {
     public final static String URL_LOGIN = HOST_NAME + API + "cuenta/login";
     public final static String URL_RECUPERAR_PASSWORD = HOST_NAME + API + "cuenta/recuperar/clave";
     public final static String URL_CONSULTA_TARJETA = HOST_NAME + API + "tarjeta/consultar";
-
+    public final static String URL_BLOQUEAR_TARJETA = HOST_NAME + API + "tarjeta/bloquear";
+    public final static String URL_DESBLOQUEAR_TARJETA = HOST_NAME + API + "tarjeta/desbloquear";
+    public final static String URL_TRANSFERENCIAS_CACAO = HOST_NAME + API + "tarjeta/traspaso";
+    public final static String URL_TRANSFERENCIA_SPEI = HOST_NAME + API + "spei/out";
+    public final static String URL_CAMBIAR_NIP = "tarjeta/asignar/nip";
 
     //private final static String HOST_NAME = "https://cocoa.cacaopaycard.com/";
     //private final static String HOST_NAME = "https://cocoa-staging.cacaopaycard.com/";

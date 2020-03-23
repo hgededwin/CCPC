@@ -2,6 +2,8 @@ package com.cacaopaycard.cacaopay.Transferencias;
 
 import android.content.Intent;
 import androidx.annotation.Nullable;
+
+import com.cacaopaycard.cacaopay.mvp.util.URLCacao;
 import com.google.android.material.textfield.TextInputLayout;
 import androidx.fragment.app.DialogFragment;
 import androidx.appcompat.app.AppCompatActivity;
@@ -59,7 +61,8 @@ public class TransferenciaActivity extends AppCompatActivity {
     private Usuario usuario;
     private boolean esInterbancaria = false;
     private String numTarjetaEmisora, strNumTelefomo, strSaldo;
-
+    private final String TAG = "TRANSFERENCIAPROPIAS";
+private final String TAG_SPEI = "TRANSFERENCIASPEI";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -156,18 +159,26 @@ public class TransferenciaActivity extends AppCompatActivity {
         System.out.println("......initTransferOwnerRequest");
 
         final Peticion peticionTransfer = new Peticion(this,requestQueue);
-        peticionTransfer.addParamsString(getString(R.string.tarjeta_emisora_param), numTarjetaEmisora);
+       /* peticionTransfer.addParamsString(getString(R.string.tarjeta_emisora_param), numTarjetaEmisora);
         peticionTransfer.addParamsString(getString(R.string.tarjeta_receptora_param),edtxtNumCardSend.getRowText());
         peticionTransfer.addParamsString(getString(R.string.monto_param), edtxtMonto.getText().toString().replaceAll("[$|,]",""));
         peticionTransfer.addParamsString(getString(R.string.num_refer_param), edtxtNumRef.getText().toString());
         peticionTransfer.addParamsString(getString(R.string.app_id_params),APP_ID);
-        peticionTransfer.addParamsString(getString(R.string.phone_params), usuario.getTelefono());
+        peticionTransfer.addParamsString(getString(R.string.phone_params), usuario.getTelefono()); */
 
+        peticionTransfer.addParamsString("TarjetaOrigen", numTarjetaEmisora);
+        peticionTransfer.addParamsString("TarjetaDestino", edtxtNumCardSend.getRowText());
+        peticionTransfer.addParamsString("Importe", edtxtNumCardSend.getText().toString().replaceAll("[$|,]", ""));
+        peticionTransfer.addParamsString("ClaveMovimiento", "");
+        peticionTransfer.addParamsString("RefNumerica", edtxtNumRef.getText().toString());
+        peticionTransfer.addParamsString("Observaciones", "N/A");
 
-        peticionTransfer.jsonObjectRequest(Request.Method.POST, getString(R.string.url_init_transfer), new Response.Listener() {
+        peticionTransfer.jsonObjectRequest(Request.Method.POST, URLCacao.URL_TRANSFERENCIAS_CACAO, new Response.Listener() {
             @Override
             public void onResponse(Object response) {
                 peticionTransfer.dismissProgressDialog();
+                Log.e(TAG,response.toString());
+
                 try {
                     System.out.println("Response..." );
                     JSONObject jsonObject = new JSONObject(response.toString());
@@ -299,14 +310,23 @@ public class TransferenciaActivity extends AppCompatActivity {
         System.out.println("Monto: " + edtxtMonto.getText().toString().replaceAll("[$|,]","")  + " Decimal: " + edtxtMonto.getDecimalDigits());
 
         final Peticion peticionTransferOthers = new Peticion(this,requestQueue);
-        peticionTransferOthers.addParamsString(getString(R.string.monto_param),edtxtMonto.getText().toString().replaceAll("[$|,]",""));
+       /* peticionTransferOthers.addParamsString(getString(R.string.monto_param),edtxtMonto.getText().toString().replaceAll("[$|,]",""));
         peticionTransferOthers.addParamsString(getString(R.string.concepto_param),edtxtConcepto.getText().toString());
         peticionTransferOthers.addParamsString(getString(R.string.referencia_numerica_param),edtxtNumRef.getText().toString());
         peticionTransferOthers.addParamsString(getString(R.string.nombre_beneficiario_param), edtxtNomBene.getText().toString());
         peticionTransferOthers.addParamsString(getString(R.string.tarjeta_emisora_2_param),numTarjetaEmisora);
         peticionTransferOthers.addParamsString(getString(R.string.cuenta_beneficiario), edtxtNumCardSend.getRowText());
         peticionTransferOthers.addParamsString(getString(R.string.phone_params), strNumTelefomo);
-        peticionTransferOthers.addParamsString(getString(R.string.app_id_params), APP_ID);
+        peticionTransferOthers.addParamsString(getString(R.string.app_id_params), APP_ID); */
+
+        peticionTransferOthers.addParamsString("Tarjeta", numTarjetaEmisora);
+        peticionTransferOthers.addParamsString("NombreBeneficiario", edtxtNomBene.getText().toString());
+        peticionTransferOthers.addParamsString("CuentaBeneficiario", edtxtNumCardSend.getText().toString());
+        peticionTransferOthers.addParamsString("RfcCurpBeneficiario", "RFC DE ALGN LUGAR");
+        peticionTransferOthers.addParamsString("ConceptoPago", edtxtConcepto.getText().toString());
+        peticionTransferOthers.addParamsString("ReferenciaNumerica", edtxtNumRef.getText().toString());
+        peticionTransferOthers.addParamsString("Monto", edtxtMonto.getText().toString());
+        peticionTransferOthers.addParamsString("EMailBeneficiario", "NO EXISTE EMIAL BENEFICICARI INPUT");
 
         peticionTransferOthers.jsonObjectRequest(Request.Method.POST, getString(R.string.url_tranfer_terceros), new Response.Listener() {
             @Override

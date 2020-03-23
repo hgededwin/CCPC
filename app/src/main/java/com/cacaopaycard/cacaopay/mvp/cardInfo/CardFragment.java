@@ -127,6 +127,8 @@ public class CardFragment extends Fragment implements com.cacaopaycard.cacaopay.
                     .show();
         } else {
             isSettingPreviousState = false;
+
+
         }
 
     }
